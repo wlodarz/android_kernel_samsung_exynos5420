@@ -87,6 +87,7 @@ static void putstr(const char *ptr)
 {
 	char c;
 
+	putc('A');
 	while ((c = *ptr++) != '\0') {
 		if (c == '\n')
 			putc('\r');

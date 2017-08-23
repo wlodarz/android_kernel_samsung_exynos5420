@@ -313,7 +313,6 @@ static void __init arndale_octa_init_early(void)
 {
 	persistent_ram_early_init(&arndale_octa_pr);
 #ifdef CONFIG_SEC_DEBUG
-#error SEC
 	sec_debug_magic_init();
 #endif
 }

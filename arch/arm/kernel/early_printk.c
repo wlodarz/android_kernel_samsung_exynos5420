@@ -16,6 +16,7 @@ extern void printch(int);
 
 static void early_write(const char *s, unsigned n)
 {
+	printch('A');
 	while (n-- > 0) {
 		if (*s == '\n')
 			printch('\r');
@@ -51,6 +52,7 @@ asmlinkage void early_printk(const char *fmt, ...)
 static int __init setup_early_printk(char *buf)
 {
 	register_console(&early_console);
+	printch('A');
 	return 0;
 }
 

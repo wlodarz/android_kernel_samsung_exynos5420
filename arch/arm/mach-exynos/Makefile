@@ -117,6 +117,10 @@ obj-$(CONFIG_MACH_UNIVERSAL5420)	+= board-universal5420-mmc.o
 obj-$(CONFIG_MACH_UNIVERSAL5420)	+= board-universal5420-power.o
 obj-$(CONFIG_MACH_UNIVERSAL5420)	+= sec-common.o
 
+obj-$(CONFIG_MACH_ARNDALE_OCTA)		+= mach-arndale_octa.o
+obj-$(CONFIG_MACH_ARNDALE_OCTA)		+= board-arndale_octa-power.o
+obj-$(CONFIG_MACH_ARNDALE_OCTA)		+= board-arndale_octa-clock.o
+
 obj-$(CONFIG_HA)			+= board-h-pmic.o
 obj-$(CONFIG_V1A)			+= board-v1-pmic.o
 obj-$(CONFIG_V2A)			+= board-v1-pmic.o

@@ -68,7 +68,7 @@ struct s3c24xx_uart_resources exynos5_uart_resources[] __initdata = {
 	},
 	[1] = {
 		.resources	= exynos5_uart1_resource,
-		.nr_resources	= ARRAY_SIZE(exynos5_uart0_resource),
+		.nr_resources	= ARRAY_SIZE(exynos5_uart1_resource),
 	},
 	[2] = {
 		.resources	= exynos5_uart2_resource,
