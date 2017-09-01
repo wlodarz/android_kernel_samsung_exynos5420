@@ -150,6 +150,8 @@ void __init_or_cpufreq s3c_set_clksrc(struct clksrc_clk *clk, bool announce)
 	if (clksrc > srcs->nr_sources || !srcs->sources[clksrc]) {
 		printk(KERN_ERR "%s: bad source %d\n",
 		       clk->clk.name, clksrc);
+		printk(KERN_ERR "clksrc %d srcs->nr_sources %d sources %p\n",
+				clksrc, srcs->nr_sources, srcs->sources[clksrc]);
 		return;
 	}
 

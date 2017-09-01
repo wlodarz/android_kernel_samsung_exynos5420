@@ -74,6 +74,7 @@ void __init s3c_init_cpu(unsigned long idcode,
 
 void __init s3c24xx_init_clocks(int xtal)
 {
+	printk(KERN_ERR "XTAL %d\n", xtal);
 	if (xtal == 0)
 		xtal = 12*1000*1000;
 

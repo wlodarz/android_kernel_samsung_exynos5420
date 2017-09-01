@@ -7,6 +7,8 @@
  * published by the Free Software Foundation.
  */
 
+#define DEBUG
+
 #include <linux/platform_device.h>
 #include <linux/serial_core.h>
 #include <linux/persistent_ram.h>
@@ -322,8 +324,9 @@ static void __init arndale_octa_machine_init(void)
 	s3c_adc_set_platdata(&arndale_octa_adc_data);
 	s3c_watchdog_set_platdata(&arndale_octa_watchdog_platform_data);
 
+	exynos_serial_debug_init(3, 0);
+
 #ifdef CONFIG_EXYNOS_FIQ_DEBUGGER
-#error FIQ
 	exynos_serial_debug_init(2, 0);
 #endif
 	//exynos5_arndale_octa_pmic_init();
